@@ -1,7 +1,3 @@
-import IC1 from "@/assert/ic1.svg";
-import IC2 from "@/assert/ic2.svg";
-import IC3 from "@/assert/ic3.svg";
-import IC4 from "@/assert/ic4.svg";
 import Image from "next/image";
 
 export default function PartnersSection() {
@@ -18,10 +14,10 @@ export default function PartnersSection() {
 
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center justify-items-center">
-                    <Image src={IC1} alt="IC1" className="w-171 h-32" />
-                    <Image src={IC2} alt="IC2" className="w-171 h-32" />
-                    <Image src={IC3} alt="IC3" className="w-171 h-32" />
-                    <Image src={IC4} alt="IC4" className="w-171 h-32" />
+                    <Image src="/ic1.svg" alt="IC1" className="w-171 h-32" />
+                    <Image src="/ic2.svg" alt="IC2" className="w-171 h-32" />
+                    <Image src="/ic3.svg" alt="IC3" className="w-171 h-32" />
+                    <Image src="/ic4.svg" alt="IC4" className="w-171 h-32" />
                 </div>
             </div>
         </section>

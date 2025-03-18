@@ -1,4 +1,3 @@
-import Bg4 from "@/public/bg4.svg";
 import Image from "next/image";
 
 export default function TradingSection() {
@@ -7,7 +6,7 @@ export default function TradingSection() {
             className="sm:px-6 md:px-12 lg:px-24 bg-gradient-to-b from-white to-[#F7F6FE] 
                 shadow-[0px_4px_200px_rgba(232,249,247,0.2)] flex flex-col items-center gap-12 md:gap-16 w-full h-auto"
             style={{
-                backgroundImage: `url(${Bg4.src})`,
+                backgroundImage: "url('/bg4.svg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}

@@ -1,4 +1,3 @@
-import Her from "@/assert/hero.svg";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -38,7 +37,7 @@ export default function HeroSection() {
                 {/* Image shown only on desktop */}
                 <div className="hidden lg:block  flex-col items-center justify-center w-full h-[624px] bg-gradient-to-b from-white to-[#F7F6FE] shadow-[0px_4px_200px_rgba(232,249,247,0.2)]">
                     <Image
-                        src={Her}
+                        src="/hero.svg"
                         alt="Crypto trading interface"
                         width={544}
                         height={480}
@@ -51,7 +50,7 @@ export default function HeroSection() {
             {/* Image shown below the buttons on mobile */}
             <div className="lg:hidden mt-8">
                 <Image
-                    src={Her}
+                    src="/hero.svg"
                     alt="Crypto trading interface"
                     width={544}
                     height={480}

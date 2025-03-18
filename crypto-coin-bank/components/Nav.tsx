@@ -1,7 +1,5 @@
 
 "use client"
-import BG from "@/assert/bgico.svg"
-import logo from "@/assert/logot.svg"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { ChevronDown, Menu, X } from "lucide-react"
@@ -23,11 +21,11 @@ const Nav = () => {
 
                 <div className="flex items-center gap-2">
                     <Link href="/" className="w-8 h-6">
-                        <Image src={BG || "/bgco.svg"} alt="BG" />
+                        <Image src="/bgco.svg" alt="BG" />
                     </Link>
                     <span className="flex items-center space-x-2">
                         <Link href="/">
-                            <Image src={logo || "/bgco.svg"} alt="Coinbank Logo" width={116} height={20} />
+                            <Image src="/bgicocopy.svg" alt="Coinbank Logo" width={116} height={20} />
                         </Link>
                     </span>
                 </div>

@@ -1,11 +1,4 @@
 "use client"
-import ATC from "@/assert/f-icon/ATC.svg";
-import BTC from "@/assert/f-icon/BTC.svg";
-import Dog from "@/assert/f-icon/Dog.svg";
-import ETH from "@/assert/f-icon/ETH.svg";
-import Gemn from "@/assert/f-icon/Gemini.svg";
-import Logo from "@/assert/f-icon/Logo.svg";
-import XRP from "@/assert/f-icon/XRP.svg";
 import { CodeBlock } from "@/components/dev-section";
 import Footer from "@/components/footer";
 import Nav from "@/components/Nav";
@@ -13,6 +6,17 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+const icons = [
+    "/Dog.svg",
+    "/Logo.svg",
+    "/BTC.svg",
+    "/ATC.svg",
+    "/ETH.svg",
+    "/Gemini.svg",
+    "/XRP.svg",
+];
+
 const Page = () => {
     return (
         <div className="min-h-screen bg-white">
@@ -120,14 +124,17 @@ const Page = () => {
                         </div>
 
                         <div className="pt-20 w-full flex justify-center">
-                            <div className="relative w-full max-w-[1120px] lg:w-[1000px] sm:h-[164px]   bg-gradient-to-r from-white to-transparent 
-        rounded-full flex flex-nowrap items-center justify-between px-4 sm:px-8 h-15 overflow-hidden">
+                            <div className="relative w-full max-w-[1120px] lg:w-[1000px] sm:h-[164px] bg-gradient-to-r from-white to-transparent 
+                                rounded-full flex flex-nowrap items-center justify-between px-4 sm:px-8 h-15 overflow-hidden">
 
-                                {[Dog, Logo, BTC, ATC, ETH, Gemn, XRP].map((icon, index) => (
+                                {icons.map((icon, index) => (
                                     <React.Fragment key={index}>
-                                        <Image src={icon} alt=""
-                                            className="w-[10%] sm:w-[5%] md:w-[8%] lg:w-[80%] max-w-[64px]" />
-                                        {index !== 6 && (
+                                        <img
+                                            src={icon}
+                                            alt="Crypto Icon"
+                                            className="w-[10%] sm:w-[5%] md:w-[8%] lg:w-[80%] max-w-[64px]"
+                                        />
+                                        {index !== icons.length - 1 && (
                                             <div className="border-t border-[#E7E3FC] w-[5%] sm:w-[8%] md:w-[6%] lg:w-[5%] flex-shrink-0"></div>
                                         )}
                                     </React.Fragment>

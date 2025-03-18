@@ -1,4 +1,3 @@
-import bg3 from "@/assert/bg3.svg"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
 
@@ -7,8 +6,7 @@ export default function FeaturesSection() {
         <section className="py-12 px-4 sm:px-8 md:px-12 lg:px-24 bg-gradient-to-b from-white to-[#F7F6FE] 
                 shadow-[0px_4px_200px_rgba(232,249,247,0.2)] flex flex-col items-center gap-16 w-full h-auto lg:h-[896px]"
             style={{
-                backgroundImage: `url(${bg3.src})`,
-                backgroundSize: "cover",
+                backgroundImage: "url('/bg3.svg')", backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
         >

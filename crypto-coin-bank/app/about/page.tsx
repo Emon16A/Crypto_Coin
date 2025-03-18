@@ -1,13 +1,9 @@
 "use client"
-import IC1 from "@/assert/ic1.svg";
-import IC2 from "@/assert/ic2.svg";
-import IC3 from "@/assert/ic3.svg";
-import IC4 from "@/assert/ic4.svg";
-import Footer from '../../components/footer';
-import Nav from '../../components/Nav';
 import { Button } from "@/components/ui/button";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
+import Footer from '../../components/footer';
+import Nav from '../../components/Nav';
 
 
 const Page = () => {
@@ -151,10 +147,10 @@ const Page = () => {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center justify-items-center">
-                                <Image src={IC1 || "/placeholder.svg"} alt="IC1" className="w-auto h-32" />
-                                <Image src={IC2 || "/placeholder.svg"} alt="IC2" className="w-auto h-32" />
-                                <Image src={IC3 || "/placeholder.svg"} alt="IC3" className="w-auto h-32" />
-                                <Image src={IC4 || "/placeholder.svg"} alt="IC4" className="w-auto h-32" />
+                                <Image src="/ic1.svg" alt="IC1" className="w-auto h-32" />
+                                <Image src="/ic2.svg" alt="IC2" className="w-auto h-32" />
+                                <Image src="/ic3.svg" alt="IC3" className="w-auto h-32" />
+                                <Image src="/ic4.svg" alt="IC4" className="w-auto h-32" />
                             </div>
                         </div>
                     </section>

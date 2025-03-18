@@ -1,15 +1,14 @@
-import DG2 from "@/assert/bg.svg";
-import DB from "@/assert/dashb.svg";
-import DAS from "@/assert/dashbord.png";
-import ATC from "@/assert/f-icon/ATC.svg";
-import BTC from "@/assert/f-icon/BTC.svg";
-import Dog from "@/assert/f-icon/Dog.svg";
-import ETH from "@/assert/f-icon/ETH.svg";
-import Gemn from "@/assert/f-icon/Gemini.svg";
-import Logo from "@/assert/f-icon/Logo.svg";
-import XRP from "@/assert/f-icon/XRP.svg";
 import Image from "next/image";
 import React from "react";
+const icons = [
+    "/Dog.svg",
+    "/Logo.svg",
+    "/BTC.svg",
+    "/ATC.svg",
+    "/ETH.svg",
+    "/Gemini.svg",
+    "/XRP.svg",
+];
 
 export default function DashboardSection() {
     return (
@@ -19,7 +18,7 @@ export default function DashboardSection() {
                 className="py-12 px-4 sm:px-8 md:px-12 lg:px-24 bg-gradient-to-b from-white to-[#F7F6FE] 
                 shadow-[0px_4px_200px_rgba(232,249,247,0.2)] flex flex-col items-center gap-16 w-full h-auto lg:h-[964px]"
                 style={{
-                    backgroundImage: `url(${DB.src})`,
+                    backgroundImage: "url('/dashb.svg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
@@ -39,7 +38,7 @@ export default function DashboardSection() {
                     </div>
 
                     <div className="relative w-full max-w-[1120px] h-auto sm:h-[400px] md:h-[661px] bg-cover bg-no-repeat drop-shadow-lg rounded-xl mx-auto">
-                        <Image src={DAS} alt="dashboard image" className="mt-12 sm:mt-16 md:mt-20 object-cover rounded-xl w-full" />
+                        <Image src="/dashbord.png" alt="dashboard image" className="mt-12 sm:mt-16 md:mt-20 object-cover rounded-xl w-full" />
                     </div>
                 </div>
             </section>
@@ -49,7 +48,7 @@ export default function DashboardSection() {
                 className="py-12 px-4 sm:px-8 md:px-12 lg:px-24 bg-gradient-to-b from-white to-[#F7F6FE] 
                 shadow-[0px_4px_200px_rgba(232,249,247,0.2)] flex flex-col items-center gap-16 w-full h-auto lg:h-[578px]"
                 style={{
-                    backgroundImage: `url(${DG2.src})`,
+                    backgroundImage: "url('/bg.svg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
@@ -67,16 +66,18 @@ export default function DashboardSection() {
                         </p>
 
                     </div>
-
                     <div className="pt-20 w-full flex justify-center">
-                        <div className="relative w-full max-w-[1120px] lg:w-[1000px] sm:h-[164px]   bg-gradient-to-r from-white to-transparent 
+                        <div className="relative w-full max-w-[1120px] lg:w-[1000px] sm:h-[164px] bg-gradient-to-r from-white to-transparent 
         rounded-full flex flex-nowrap items-center justify-between px-4 sm:px-8 h-15 overflow-hidden">
 
-                            {[Dog, Logo, BTC, ATC, ETH, Gemn, XRP].map((icon, index) => (
+                            {icons.map((icon, index) => (
                                 <React.Fragment key={index}>
-                                    <Image src={icon} alt=""
-                                        className="w-[10%] sm:w-[5%] md:w-[8%] lg:w-[80%] max-w-[64px]" />
-                                    {index !== 6 && (
+                                    <img
+                                        src={icon}
+                                        alt="Crypto Icon"
+                                        className="w-[10%] sm:w-[5%] md:w-[8%] lg:w-[80%] max-w-[64px]"
+                                    />
+                                    {index !== icons.length - 1 && (
                                         <div className="border-t border-[#E7E3FC] w-[5%] sm:w-[8%] md:w-[6%] lg:w-[5%] flex-shrink-0"></div>
                                     )}
                                 </React.Fragment>

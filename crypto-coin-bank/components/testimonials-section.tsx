@@ -1,4 +1,3 @@
-import N from "@/public/new.svg";
 import { Star } from "lucide-react";
 import Image from "next/image";
 
@@ -7,7 +6,7 @@ export default function TestimonialsSection() {
         <section
             className="bg-[#F7F6FE] bg-cover bg-center bg-no-repeat lg:h-[800px] lg:pl-20 lg:w-full"
             style={{
-                backgroundImage: `url('${N.src}')`,
+                backgroundImage: "url('/new.svg')",
             }}
         >
             <div className="max-w-7xl mx-auto py-12 px-4 space-y-16">
