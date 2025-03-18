@@ -1,0 +1,56 @@
+<svg width="352" height="200" viewBox="0 0 352 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_15_450)">
+<path d="M0 16C0 7.16344 7.16344 0 16 0H336C344.837 0 352 7.16344 352 16V200H0V16Z" fill="#0E0637"/>
+<g opacity="0.3">
+<rect x="46" y="-11" width="1" height="240" fill="#FFE0C8"/>
+<rect x="111" y="-11" width="1" height="240" fill="#FFE0C8"/>
+<rect x="176" y="-11" width="1" height="240" fill="#FFE0C8"/>
+<rect x="241" y="-11" width="1" height="240" fill="#FFE0C8"/>
+<rect x="306" y="-11" width="1" height="240" fill="#FFE0C8"/>
+<rect x="501.962" y="36" width="1" height="843" transform="rotate(90 501.962 36)" fill="#FFE0C8"/>
+<rect x="501.962" y="83.0001" width="1" height="843" transform="rotate(90 501.962 83.0001)" fill="#FFE0C8"/>
+<rect x="501.962" y="130" width="1" height="843" transform="rotate(90 501.962 130)" fill="#FFE0C8"/>
+<rect x="501.962" y="177" width="1" height="843" transform="rotate(90 501.962 177)" fill="#FFE0C8"/>
+</g>
+<rect x="344" y="55" width="8" height="54" rx="4" fill="#FFE0C8"/>
+<rect x="347" y="47" width="2" height="80" rx="1" fill="#FFE0C8"/>
+<rect x="32" y="71" width="8" height="54" rx="4" fill="#FFE0C8"/>
+<rect x="35" y="63" width="2" height="80" rx="1" fill="#FFE0C8"/>
+<rect x="8" y="37" width="8" height="54" rx="4" fill="#F7DF27"/>
+<rect x="11" y="29" width="2" height="124" rx="1" fill="#F7DF27"/>
+<rect x="176" y="92" width="8" height="54" rx="4" fill="#F7DF27"/>
+<rect x="179" y="84" width="2" height="80" rx="1" fill="#F7DF27"/>
+<rect x="272" y="57" width="8" height="40" rx="4" fill="#F7DF27"/>
+<rect x="275" y="37" width="2" height="80" rx="1" fill="#F7DF27"/>
+<rect x="248" y="72" width="8" height="32" rx="4" fill="#F7DF27"/>
+<rect x="251" y="12" width="2" height="120" rx="1" fill="#F7DF27"/>
+<rect x="152" y="100" width="8" height="27" rx="4" fill="#F7DF27"/>
+<rect x="155" y="96" width="2" height="55" rx="1" fill="#F7DF27"/>
+<rect x="320" y="49" width="8" height="27" rx="4" fill="#F7DF27"/>
+<rect x="323" y="45" width="2" height="55" rx="1" fill="#F7DF27"/>
+<rect x="56" y="84" width="8" height="20" rx="4" fill="#F7DF27"/>
+<rect x="59" y="77" width="2" height="46" rx="1" fill="#F7DF27"/>
+<rect x="296" y="50" width="8" height="20" rx="4" fill="#F7DF27"/>
+<rect x="299" y="43" width="2" height="46" rx="1" fill="#F7DF27"/>
+<rect x="224" y="68" width="8" height="16" rx="4" fill="#FFE0C8"/>
+<rect x="227" y="62" width="2" height="55" rx="1" fill="#FFE0C8"/>
+<rect x="128" y="112" width="8" height="16" rx="4" fill="#FFE0C8"/>
+<rect x="131" y="106" width="2" height="55" rx="1" fill="#FFE0C8"/>
+<rect x="104" y="123" width="8" height="16" rx="4" fill="#FFE0C8"/>
+<rect x="107" y="114" width="2" height="70" rx="1" fill="#FFE0C8"/>
+<rect x="200" y="76" width="8" height="16" rx="4" fill="#FFE0C8"/>
+<rect x="203" y="70" width="2" height="40" rx="1" fill="#FFE0C8"/>
+<rect x="80" y="129" width="8" height="16" rx="4" fill="#F7DF27"/>
+<rect x="83" y="123" width="2" height="40" rx="1" fill="#F7DF27"/>
+<path d="M0 0H352V200H0V0Z" fill="url(#paint0_radial_15_450)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_15_450" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(176 100) rotate(90) scale(104.5 178.593)">
+<stop stop-color="#0E0637" stop-opacity="0"/>
+<stop offset="1" stop-color="#0E0637" stop-opacity="0.8"/>
+</radialGradient>
+<clipPath id="clip0_15_450">
+<rect width="352" height="200" fill="white"/>
+</clipPath>
+</defs>
+</svg>
