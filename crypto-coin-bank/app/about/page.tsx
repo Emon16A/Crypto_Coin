@@ -160,9 +160,9 @@ const Page = () => {
     <div
         className="bg-[#14162E] text-white rounded-3xl p-12 text-center max-w-[1000px] mx-auto"
         style={{
-            backgroundImage: `url('/path/to/aboutbg.svg')`, // Make sure the path is correct
-            backgroundSize: "cover", // Ensures the image covers the container
-            backgroundPosition: "center", // Centers the background image
+            backgroundImage: `url('/aboutbg.svg')`,
+            backgroundSize: "cover", 
+            backgroundPosition: "center", 
         }}
     >
         <h2 className="text-2xl font-bold mb-4">Join our mission</h2>
