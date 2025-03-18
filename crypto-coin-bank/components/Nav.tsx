@@ -21,7 +21,7 @@ const Nav = () => {
 
                 <div className="flex items-center gap-2">
                     <Link href="/" className="w-[8px] h-[6px]">
-                        <Image src="/bgco.svg" alt="BG" width={6} height={6} />
+                        <Image src="/bgico.svg" alt="BG" width={24} height={24} layout="intrinsic" />
                     </Link>
                     <span className="flex items-center space-x-2">
                         <Link href="/">
