@@ -21,7 +21,7 @@ const Navpr = () => {
 
                 <div className="flex items-center gap-2">
                     <Link href="/" className="w-[8px] h-[6px]">
-                        <Image src="/bgicocopy.svg" alt="BG" />
+                        <Image src="/bgico.svg" alt="BG" width={116} height={20} layout="intrinsic" />
                     </Link>
                     <span className="flex items-center space-x-2">
                         <Link href="/">
