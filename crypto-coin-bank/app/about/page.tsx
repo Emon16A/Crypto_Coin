@@ -147,10 +147,10 @@ const Page = () => {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center justify-items-center">
-                                <Image src="/ic1.svg" alt="IC1" className="w-32 h-32" />
-                                <Image src="/ic2.svg" alt="IC2" className="w-32 h-32" />
-                                <Image src="/ic3.svg" alt="IC3" className="w-32 h-32" />
-                                <Image src="/ic4.svg" alt="IC4" className="w-32 h-32" />
+                                <Image src="/ic1.svg" alt="IC1" className="w-60 h-32" />
+                                <Image src="/ic2.svg" alt="IC2" className="w-60 h-32" />
+                                <Image src="/ic3.svg" alt="IC3" className="w-60 h-32" />
+                                <Image src="/ic4.svg" alt="IC4" className="w-60 h-32" />
                             </div>
                         </div>
                     </section>
