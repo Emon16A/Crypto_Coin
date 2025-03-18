@@ -156,20 +156,22 @@ const Page = () => {
                     </section>
 
                     {/* Join Mission CTA */}
-                    <section
-                        className="container mx-auto px-4 py-16 bg-cover bg-center"
-                        style={{
-                            backgroundImage: "url('/aboutbg.svg')",
-                        }}
-                    >
-                        <div className="bg-[#14162E] text-white rounded-3xl p-12 text-center max-w-[1000px] mx-auto bg-opacity-90">
-                            <h2 className="text-2xl font-bold mb-4">Join our mission</h2>
-                            <p className="text-gray-300 mb-8 max-w-[600px] mx-auto">
-                                Join our mission to bring greater choice, independence, and opportunity by reimagining money for users.
-                            </p>
-                            <Button className="bg-orange-500 hover:bg-orange-600">See Career Page</Button>
-                        </div>
-                    </section>
+                    <section className="container mx-auto px-4 py-16">
+    <div
+        className="bg-[#14162E] text-white rounded-3xl p-12 text-center max-w-[1000px] mx-auto"
+        style={{
+            backgroundImage: `url('/path/to/aboutbg.svg')`, // Make sure the path is correct
+            backgroundSize: "cover", // Ensures the image covers the container
+            backgroundPosition: "center", // Centers the background image
+        }}
+    >
+        <h2 className="text-2xl font-bold mb-4">Join our mission</h2>
+        <p className="text-gray-300 mb-8 max-w-[600px] mx-auto">
+            Join our mission to bring greater choice, independence, and opportunity by reimagining money for users.
+        </p>
+        <Button className="bg-orange-500 hover:bg-orange-600">See Career Page</Button>
+    </div>
+</section>
 
                 </main>
             </div>
