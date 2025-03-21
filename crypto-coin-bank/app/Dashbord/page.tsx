@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image"
 export default function CoinbankDashboard() {
-    const [activeTab, setActiveTab] = useState("buy")
+    const [activeTab, setActiveTab] = useState("buy");
 
     return (
         <div className="flex min-h-screen bg-white">
@@ -460,6 +460,8 @@ export default function CoinbankDashboard() {
                     {/* Right Sidebar */}
                     <div className="hidden w-80 border-l bg-white p-6 lg:block">
                         <Tabs defaultValue="buy" className="w-full">
+                            const [activeTab, setActiveTab] = useState("buy");
+
                             <TabsList className="grid w-full grid-cols-3">
                                 <TabsTrigger value="buy" onClick={() => setActiveTab("buy")}>
                                     Buy
@@ -471,6 +473,7 @@ export default function CoinbankDashboard() {
                                     Convert
                                 </TabsTrigger>
                             </TabsList>
+
                             <TabsContent value="buy" className="mt-6">
                                 <div className="flex flex-col items-center">
                                     <div className="text-4xl font-bold text-gray-300">$0</div>
