@@ -165,18 +165,17 @@ const Page = () => {
 
                     {/* Join Mission CTA */}
                     <section
-                        className="container text-white rounded-3xl p-6 sm:p-12 text-center max-w-[1000px] mx-auto bg-opacity-90 bg-cover bg-center relative"
+                        className="container mx-auto px-4 py-16 bg-cover bg-center"
                         style={{
                             backgroundImage: "url('/aboutbg.svg')",
                         }}
                     >
-                        <div className="absolute inset-0 bg-black/50 opacity-50 rounded-3xl"></div>
-
-                        <div className="relative z-10">
-                            <h2 className="text-lg sm:text-2xl font-bold mb-4">Join our mission</h2>
-                            <p className="text-sm sm:text-base text-gray-300 mb-8 max-w-[600px] mx-auto">
+                        <div className="bg-[#14162E] text-white rounded-3xl p-12 text-center max-w-[1000px] mx-auto bg-opacity-90">
+                            <h2 className="text-2xl font-bold mb-4">Join our mission</h2>
+                            <p className="text-gray-300 mb-8 max-w-[600px] mx-auto">
                                 Join our mission to bring greater choice, independence, and opportunity by reimagining money for users.
                             </p>
+                            <Button className="bg-orange-500 hover:bg-orange-600">See Career Page</Button>
                         </div>
                     </section>
 
