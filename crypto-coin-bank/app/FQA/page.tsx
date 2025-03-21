@@ -20,7 +20,7 @@ const page = () => {
                 <div className="max-w-7xl mx-auto p-4 h-[250px] w-full md:w-[1120px] flex items-center justify-center">
                     <div className="bg-[#1a1333] bg-[url('/aboutbg.svg')] bg-cover bg-center rounded-xl p-10 text-center w-full">
                         <h1 className="text-white text-2xl font-bold mb-2 pt-9 pb-5">
-                            Can’t find what you’re looking for?
+                            Can not find what you are looking for?
                         </h1>
                         <div className="flex justify-center"> {/* This centers the button */}
                             <Button className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-md inline-flex items-center justify-center gap-2">

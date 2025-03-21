@@ -117,7 +117,7 @@ const page = () => {
 
                                 <div
                                     className="bg-[#1E0E4B] text-white rounded-lg p-8 text-center w-full md:w-[300px] flex flex-col justify-center bg-[url('/Supp.svg')] bg-no-repeat bg-center bg-cover">
-                                    <h2 className="text-xl font-semibold mb-4">Can't find what you're looking for?</h2>
+                                    <h2 className="text-xl font-semibold mb-4">Can not find what you are looking for?</h2>
                                     <Link
                                         href="/contact"
                                         className="inline-flex items-center justify-center bg-[#FF6B00] text-white rounded-md px-4 py-2 mt-2 hover:bg-[#FF6B00]/90 transition-colors"
