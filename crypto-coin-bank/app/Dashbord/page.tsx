@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image"
 export default function CoinbankDashboard() {
-    const [activeTab, setActiveTab] = useState("buy");
+    const [, setActiveTab] = useState("buy");
 
     return (
         <div className="flex min-h-screen bg-white">
