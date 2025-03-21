@@ -71,7 +71,10 @@ export default function Page() {
                         </Link>
 
                         <Button className="w-full bg-orange-500 hover:bg-orange-600">
-                            Sign in
+                            <Link href="/Dashbord">
+                                Sign in
+                            </Link>
+
                         </Button>
                     </form>
 
