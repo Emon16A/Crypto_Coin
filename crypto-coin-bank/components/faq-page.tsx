@@ -165,7 +165,7 @@ export default function FAQPage() {
                       How can I reset my password?
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600">
-                      You can reset your password by clicking "Forgot password" on the login page. We will send you an
+                      You can reset your password by clicking Forgot password on the login page. We will send you an
                       email with instructions to create a new password.
                     </AccordionContent>
                   </AccordionItem>

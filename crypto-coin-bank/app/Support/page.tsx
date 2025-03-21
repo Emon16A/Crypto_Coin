@@ -28,54 +28,79 @@ const page = () => {
                     <div className="max-w-6xl mx-auto px-4 -mt-20  ">
 
                         <div className="grid md:grid-cols-3 gap-6 mb-12">
-                            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-[#1E0E4B] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Image src="/fqlo.png" alt="Icon" height={64} width={64} />
-                                </div>
-                                <h2 className="text-lg font-semibold mb-2">Getting started</h2>
-                                <p className="text-gray-600 text-sm">Everything you need to start using Coinbank.</p>
-                            </div>
 
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-[#FF6B00] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Image src="/su1.svg" alt="Icon" height={64} width={64} />
-                                </div>
-                                <h2 className="text-lg font-semibold mb-2">Managing my account</h2>
-                                <p className="text-gray-600 text-sm">Manage your account, settings, and more.</p>
+                                <Link href="/FQA">
+
+                                    <div className="w-12 h-12 bg-[#1E0E4B] rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Image src="/fqlo.png" alt="Icon" height={64} width={64} />
+                                    </div>
+                                    <h2 className="text-lg font-semibold mb-2">Getting started</h2>
+                                    <p className="text-gray-600 text-sm">Everything you need to start using Coinbank.</p>
+                                </Link>
                             </div>
+
+
 
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-[#CCFF00] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Image src="/su2.svg" alt="Icon" height={64} width={64} />
-
-                                </div>
-                                <h2 className="text-lg font-semibold mb-2">Trading</h2>
-                                <p className="text-gray-600 text-sm">Learn Buy, sell, send, or receive cryptocurrencies.</p>
+                                <Link href="/FQA">
+                                    <div className="w-12 h-12 bg-[#FF6B00] rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Image src="/su1.svg" alt="Icon" height={64} width={64} />
+                                    </div>
+                                    <h2 className="text-lg font-semibold mb-2">Managing my account</h2>
+                                    <p className="text-gray-600 text-sm">Manage your account, settings, and more.</p>
+                                </Link>
                             </div>
 
-                            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-[#FF6B00] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Image src="/su3.svg" alt="Icon" height={64} width={64} />
-                                </div>
-                                <h2 className="text-lg font-semibold mb-2">Funding</h2>
-                                <p className="text-gray-600 text-sm">Learn how to transfer funds to and from your account.</p>
-                            </div>
+
 
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-[#CCFF00] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Image src="/su4.svg" alt="Icon" height={64} width={64} />
-                                </div>
-                                <h2 className="text-lg font-semibold mb-2">Privacy and security</h2>
-                                <p className="text-gray-600 text-sm">Help secure and protect your account.</p>
+                                <Link href="/FQA">
+                                    <div className="w-12 h-12 bg-[#CCFF00] rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Image src="/su2.svg" alt="Icon" height={64} width={64} />
+
+                                    </div>
+                                    <h2 className="text-lg font-semibold mb-2">Trading</h2>
+                                    <p className="text-gray-600 text-sm">Learn Buy, sell, send, or receive cryptocurrencies.</p>
+                                </Link>
                             </div>
 
+
+
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-                                <div className="w-12 h-12 bg-[#1E0E4B] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Image src="/su5.svg" alt="Icon" height={64} width={64} />
-                                </div>
-                                <h2 className="text-lg font-semibold mb-2">Other topics</h2>
-                                <p className="text-gray-600 text-sm">Learn about API, common scams, referral programs, and more.</p>
+                                <Link href="/FQA">
+                                    <div className="w-12 h-12 bg-[#FF6B00] rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Image src="/su3.svg" alt="Icon" height={64} width={64} />
+                                    </div>
+                                    <h2 className="text-lg font-semibold mb-2">Funding</h2>
+                                    <p className="text-gray-600 text-sm">Learn how to transfer funds to and from your account.</p>
+                                </Link>
                             </div>
+
+
+
+                            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
+                                <Link href="/FQA">
+                                    <div className="w-12 h-12 bg-[#CCFF00] rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Image src="/su4.svg" alt="Icon" height={64} width={64} />
+                                    </div>
+                                    <h2 className="text-lg font-semibold mb-2">Privacy and security</h2>
+                                    <p className="text-gray-600 text-sm">Help secure and protect your account.</p>
+                                </Link>
+                            </div>
+
+
+
+                            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
+                                <Link href="/FQA">
+                                    <div className="w-12 h-12 bg-[#1E0E4B] rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Image src="/su5.svg" alt="Icon" height={64} width={64} />
+                                    </div>
+                                    <h2 className="text-lg font-semibold mb-2">Other topics</h2>
+                                    <p className="text-gray-600 text-sm">Learn about API, common scams, referral programs, and more.</p>
+                                </Link>
+                            </div>
+
                         </div>
 
                         <div className="mb-12">
