@@ -460,7 +460,6 @@ export default function CoinbankDashboard() {
                     {/* Right Sidebar */}
                     <div className="hidden w-80 border-l bg-white p-6 lg:block">
                         <Tabs defaultValue="buy" className="w-full">
-                            const [activeTab, setActiveTab] = useState("buy");
 
                             <TabsList className="grid w-full grid-cols-3">
                                 <TabsTrigger value="buy" onClick={() => setActiveTab("buy")}>
