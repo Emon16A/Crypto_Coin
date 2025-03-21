@@ -7,12 +7,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 const Navpr = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
+    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen)
-    }
-
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const toggleFeatures = () => setIsFeaturesOpen(!isFeaturesOpen);
+    const toggleCompany = () => setIsCompanyOpen(!isCompanyOpen);
     return (
         <nav className="flex flex-col items-start p-6 gap-2 w-full bg-[#FF6E00] backdrop-blur-lg relative">
             {/* Top Navigation */}
@@ -20,8 +21,8 @@ const Navpr = () => {
 
 
                 <div className="flex items-center gap-2">
-                    <Link href="/" className="w-[8px] h-[6px]">
-                        <Image src="/bgicocopy.svg" alt="BG" />
+                    <Link href="/" >
+                        <Image src="/bgicocopy.svg" alt="BG" width={42} height={42} />
                     </Link>
                     <span className="flex items-center space-x-2">
                         <Link href="/">
@@ -113,7 +114,7 @@ const Navpr = () => {
                                 </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <Link href="#" className="flex items-center gap-2">
+                                <Link href="/Support" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n8.svg" alt="N2" width={24} height={24} />
                                     </div>
@@ -152,35 +153,39 @@ const Navpr = () => {
                     <div className="flex flex-col items-start gap-4 p-4">
                         {/* Features Dropdown */}
                         <div className="w-full">
-                            <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
+                            <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleFeatures}>
                                 Features
+                                {/* Chevron Down Icon */}
+                                <ChevronDown className="h-4 w-4 ml-2 transform transition-transform duration-300" style={{ transform: isFeaturesOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                             </Button>
-                            <div className="pl-4 space-y-2 mt-2">
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n1.svg" alt="N2" width={24} height={24} />
-                                    </div>
-                                    Funding
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n2.svg" alt="N2" width={24} height={24} />
-                                    </div>
-                                    Staking
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n3.svg" alt="N2" width={24} height={24} />
-                                    </div>
-                                    Liquidity
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n4.svg" alt="N2" width={24} height={24} />
-                                    </div>
-                                    Margin Trading
-                                </Link>
-                            </div>
+                            {isFeaturesOpen && (
+                                <div className="pl-4 space-y-2 mt-2">
+                                    <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n1.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Funding
+                                    </Link>
+                                    <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n2.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Staking
+                                    </Link>
+                                    <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n3.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Liquidity
+                                    </Link>
+                                    <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n4.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Margin Trading
+                                    </Link>
+                                </div>
+                            )}
                         </div>
 
                         <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
@@ -189,50 +194,58 @@ const Navpr = () => {
 
                         {/* Company Dropdown */}
                         <div className="w-full">
-                            <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
+                            <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleCompany}>
                                 Company
+                                {/* Chevron Down Icon */}
+                                <ChevronDown className="h-4 w-4 ml-2 transform transition-transform duration-300" style={{ transform: isCompanyOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                             </Button>
-                            <div className="pl-4 space-y-2 mt-2">
-                                <Link href="/about" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n5.svg" alt="N2" width={24} height={24} />
-                                    </div>
-                                    About
-                                </Link>
-                                <Link href="/blog" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n6.svg" alt="N2" width={24} height={24} />
-                                    </div>
-                                    Blog
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n7.svg" alt="N2" width={24} height={24} />
-                                    </div>
-                                    FAQs
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n8.svg" alt="N2" width={24} height={24} />
-                                    </div>
-                                    Support
-                                </Link>
-                            </div>
+                            {isCompanyOpen && (
+                                <div className="pl-4 space-y-2 mt-2">
+                                    <Link href="/about" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n5.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        About
+                                    </Link>
+                                    <Link href="/blog" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n6.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Blog
+                                    </Link>
+                                    <Link href="/FQA" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n7.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        FAQs
+                                    </Link>
+                                    <Link href="/Support" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n8.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Support
+                                    </Link>
+                                </div>
+                            )}
                         </div>
 
                         <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
                             <Link href="/Developers">Developers</Link>
                         </Button>
 
-                        {/* Right Buttons (Sign In & Get Started) */}
-                        <div className="mt-4 flex flex-col gap-4 w-full">
-                            <Button className="w-full text-black bg-white border border-[#FFE0C8] hover:bg-[#FF6E00] hover:text-white rounded-lg">
-                                <Link href="/signin">Sign In</Link>
-                            </Button>
-                            <Button className="w-full bg-white border border-[#FFE0C8] text-[#FF6E00] hover:bg-[#FF6E00] hover:text-white rounded-lg">
-                                <Link href="/Signup">Get Started</Link>
-                            </Button>
-                        </div>
+                        <Button
+                            className="text-black bg-white border border-[#FFE0C8] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300 w-full"
+                            onClick={toggleMenu}
+                        >
+                            <Link href="/signin">Sign In</Link>
+                        </Button>
+
+                        <Button
+                            className="bg-white border border-[#FFE0C8] text-[#FF6E00] hover:bg-[#FF6E00] hover:text-white rounded-lg px-6 py-2 transition-colors duration-300 w-full"
+                            onClick={toggleMenu}
+                        >
+                            <Link href="/Signup">Get Started</Link>
+                        </Button>
                     </div>
                 </div>
             )}

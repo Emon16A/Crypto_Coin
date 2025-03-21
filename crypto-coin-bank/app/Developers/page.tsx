@@ -19,7 +19,7 @@ const icons = [
 
 const Page = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <Nav />
             <div className="min-h-screen bg-[#ffff]">
                 <section className="container py-20 md:py-32 relative bg-[url('/Dev.svg')] bg-no-repeat bg-center bg-cover">

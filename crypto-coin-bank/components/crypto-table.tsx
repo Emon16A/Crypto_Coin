@@ -2,9 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Line, LineChart, ResponsiveContainer } from "recharts"
-import Image from "next/image"
+
 interface Coin {
   id: string
   symbol: string
@@ -24,27 +25,22 @@ export default function CryptoTable() {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    let mounted = true
-    setLoading(true)
+    const fetchData = async () => {
+      setLoading(true)
 
-    fetch(`/api/crypto?page=${currentPage}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (mounted) {
-          setCoins(data)
-          setLoading(false)
-        }
-      })
-      .catch((error) => {
+      try {
+        const response = await fetch(`/api/crypto?page=${currentPage}`)
+        const data = await response.json()
+        setCoins(data)
+      } catch (error) {
         console.error("Error fetching coins:", error)
-        if (mounted) {
-          setLoading(false)
-        }
-      })
-
-    return () => {
-      mounted = false
+      } finally {
+        setLoading(false)
+      }
     }
+
+    fetchData()
+
   }, [currentPage])
 
   const formatPrice = (price: number) => {

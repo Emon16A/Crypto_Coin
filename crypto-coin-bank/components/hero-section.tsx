@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function HeroSection() {
     return (
-        <section className="py-16 px-4 md:px-6 max-w-7xl mx-auto">
+        <section className="py-10 px-4 md:px-6 max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="flex flex-col items-start space-y-6 w-full lg:max-w-[458px] h-auto">
+                <div className="flex flex-col items-start space-y-10 w-full lg:max-w-[458px] h-auto">
                     <p className="text-orange-500 font-medium uppercase tracking-wider text-sm">
                         Sign in to your secure wallet!
                     </p>

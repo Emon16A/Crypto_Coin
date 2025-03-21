@@ -1,9 +1,9 @@
 "use client"
+import Footer from '@/components/footer';
+import Nav from '@/components/Nav';
 import { Button } from "@/components/ui/button";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
-import Footer from '../../components/footer';
-import Nav from '../../components/Nav';
 
 
 const Page = () => {
@@ -146,30 +146,40 @@ const Page = () => {
                                 <p className="text-gray-600 text-sm md:text-base">Trusted by these blockchains leading industries</p>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center justify-items-center">
-                                <Image src="/ic1.svg" alt="IC1" className="w-60 h-32" />
-                                <Image src="/ic2.svg" alt="IC2" className="w-60 h-32" />
-                                <Image src="/ic3.svg" alt="IC3" className="w-60 h-32" />
-                                <Image src="/ic4.svg" alt="IC4" className="w-60 h-32" />
+                            <div className="flex flex-wrap items-center justify-center gap-6">
+                                <div className="w-40 sm:w-48 md:w-52 lg:w-60">
+                                    <Image src="/ic1.svg" alt="IC1" width={240} height={128} className="object-contain w-full" />
+                                </div>
+                                <div className="w-40 sm:w-48 md:w-52 lg:w-60">
+                                    <Image src="/ic2.svg" alt="IC2" width={240} height={128} className="object-contain w-full" />
+                                </div>
+                                <div className="w-40 sm:w-48 md:w-52 lg:w-60">
+                                    <Image src="/ic3.svg" alt="IC3" width={240} height={128} className="object-contain w-full" />
+                                </div>
+                                <div className="w-40 sm:w-48 md:w-52 lg:w-60">
+                                    <Image src="/ic4.svg" alt="IC4" width={240} height={128} className="object-contain w-full" />
+                                </div>
                             </div>
                         </div>
                     </section>
 
                     {/* Join Mission CTA */}
                     <section
-                        className="container mx-auto px-4 py-16 bg-cover bg-center"
+                        className="container text-white rounded-3xl p-6 sm:p-12 text-center max-w-[1000px] mx-auto bg-opacity-90 bg-cover bg-center relative"
                         style={{
                             backgroundImage: "url('/aboutbg.svg')",
                         }}
                     >
-                        <div className="bg-[#14162E] text-white rounded-3xl p-12 text-center max-w-[1000px] mx-auto bg-opacity-90">
-                            <h2 className="text-2xl font-bold mb-4">Join our mission</h2>
-                            <p className="text-gray-300 mb-8 max-w-[600px] mx-auto">
+                        <div className="absolute inset-0 bg-black/50 opacity-50 rounded-3xl"></div>
+
+                        <div className="relative z-10">
+                            <h2 className="text-lg sm:text-2xl font-bold mb-4">Join our mission</h2>
+                            <p className="text-sm sm:text-base text-gray-300 mb-8 max-w-[600px] mx-auto">
                                 Join our mission to bring greater choice, independence, and opportunity by reimagining money for users.
                             </p>
-                            <Button className="bg-orange-500 hover:bg-orange-600">See Career Page</Button>
                         </div>
                     </section>
+
 
                 </main>
             </div>

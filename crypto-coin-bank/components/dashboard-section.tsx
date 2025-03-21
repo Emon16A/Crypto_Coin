@@ -38,7 +38,15 @@ export default function DashboardSection() {
                     </div>
 
                     <div className="relative w-full max-w-[1120px] h-auto sm:h-[400px] md:h-[661px] bg-cover bg-no-repeat drop-shadow-lg rounded-xl mx-auto">
-                        <Image src="/dashbord.png" alt="dashboard image" className="mt-12 sm:mt-16 md:mt-20 object-cover rounded-xl w-full" />
+                        <div className="relative w-full h-64 mt-12 sm:mt-16 md:mt-20">
+                            <Image
+                                src="/dashbord.png"
+                                alt="dashboard image"
+                                fill
+                                className="object-cover rounded-xl"
+                            />
+                        </div>
+
                     </div>
                 </div>
             </section>

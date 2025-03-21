@@ -7,12 +7,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 const Nav = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
+    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen)
-    }
-
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const toggleFeatures = () => setIsFeaturesOpen(!isFeaturesOpen);
+    const toggleCompany = () => setIsCompanyOpen(!isCompanyOpen);
     return (
         <nav className="flex flex-col items-start p-6 gap-2 w-full bg-white bg-opacity-40 backdrop-blur-lg relative">
             {/*  Navigation */}
@@ -20,8 +21,8 @@ const Nav = () => {
 
 
                 <div className="flex items-center gap-2">
-                    <Link href="/" className="w-[8px] h-[6px]">
-                        <Image src="/bgico.svg" alt="BG" width={24} height={24} layout="intrinsic" />
+                    <Link href="/" >
+                        <Image src="/bgico.svg" alt="BG" width={42} height={42} layout="intrinsic" />
                     </Link>
                     <span className="flex items-center space-x-2">
                         <Link href="/">
@@ -118,7 +119,7 @@ const Nav = () => {
                                 </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <Link href="#" className="flex items-center gap-2">
+                                <Link href="/Support" className="flex items-center gap-2">
                                     <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
                                         <Image src="/n8.svg" alt="N2" width={24} height={24} />
 
@@ -158,39 +159,39 @@ const Nav = () => {
                     <div className="flex flex-col items-start gap-4 p-4">
                         {/* Features Dropdown */}
                         <div className="w-full">
-                            <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
+                            <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleFeatures}>
                                 Features
+                                {/* Chevron Down Icon */}
+                                <ChevronDown className="h-4 w-4 ml-2 transform transition-transform duration-300" style={{ transform: isFeaturesOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                             </Button>
-                            <div className="pl-4 space-y-2 mt-2">
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n1.svg" alt="N2" width={24} height={24} />
-
-                                    </div>
-                                    Funding
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n2.svg" alt="N2" width={24} height={24} />
-
-                                    </div>
-                                    Staking
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n3.svg" alt="N2" width={24} height={24} />
-
-                                    </div>
-                                    Liquidity
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n4.svg" alt="N2" width={24} height={24} />
-
-                                    </div>
-                                    Margin Trading
-                                </Link>
-                            </div>
+                            {isFeaturesOpen && (
+                                <div className="pl-4 space-y-2 mt-2">
+                                    <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n1.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Funding
+                                    </Link>
+                                    <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n2.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Staking
+                                    </Link>
+                                    <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n3.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Liquidity
+                                    </Link>
+                                    <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n4.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Margin Trading
+                                    </Link>
+                                </div>
+                            )}
                         </div>
 
                         <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
@@ -199,43 +200,43 @@ const Nav = () => {
 
                         {/* Company Dropdown */}
                         <div className="w-full">
-                            <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
+                            <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleCompany}>
                                 Company
+                                {/* Chevron Down Icon */}
+                                <ChevronDown className="h-4 w-4 ml-2 transform transition-transform duration-300" style={{ transform: isCompanyOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                             </Button>
-                            <div className="pl-4 space-y-2 mt-2">
-                                <Link href="/about" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n5.svg" alt="N2" width={24} height={24} />
-
-                                    </div>
-                                    About
-                                </Link>
-                                <Link href="/blog" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n6.svg" alt="N2" width={24} height={24} />
-
-                                    </div>
-                                    Blog
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n7.svg" alt="N2" width={24} height={24} />
-
-                                    </div>
-                                    FAQs
-                                </Link>
-                                <Link href="#" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
-                                    <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
-                                        <Image src="/n8.svg" alt="N2" width={24} height={24} />
-
-                                    </div>
-                                    Support
-                                </Link>
-                            </div>
+                            {isCompanyOpen && (
+                                <div className="pl-4 space-y-2 mt-2">
+                                    <Link href="/about" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n5.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        About
+                                    </Link>
+                                    <Link href="/blog" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n6.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Blog
+                                    </Link>
+                                    <Link href="/FQA" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n7.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        FAQs
+                                    </Link>
+                                    <Link href="/Support" className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+                                        <div className="w-5 h-5 rounded bg-orange-100 flex items-center justify-center">
+                                            <Image src="/n8.svg" alt="N2" width={24} height={24} />
+                                        </div>
+                                        Support
+                                    </Link>
+                                </div>
+                            )}
                         </div>
 
                         <Button variant="ghost" className="text-black w-full justify-start" onClick={toggleMenu}>
-                            <Link href="#">Developers</Link>
+                            <Link href="/Developers">Developers</Link>
                         </Button>
 
                         <Button

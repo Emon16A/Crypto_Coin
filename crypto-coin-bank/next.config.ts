@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: [""], 
+    domains: ['coin-images.coingecko.com'],
   },
   webpack(config) {
     config.module.rules.push({

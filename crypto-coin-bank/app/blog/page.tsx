@@ -1,14 +1,14 @@
 
 
 "use client"
+import Footer from '@/components/footer';
+import Nav from '@/components/Nav';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Footer from '../../components/footer';
-import Nav from '../../components/Nav';
 
 
 const categories = ["Trending", "Crypto and Blockchain", "Investment", "Markets", "Web 3", "Press Release"]
