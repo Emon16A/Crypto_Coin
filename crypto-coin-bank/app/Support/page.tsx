@@ -1,6 +1,7 @@
 import Footer from '@/components/footer'
 import Navpr from '@/components/navpr'
-import { BarChart2, BookOpen, Search, Shield, User, Wallet } from "lucide-react"
+import { Search } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 const page = () => {
     return (
@@ -29,21 +30,7 @@ const page = () => {
                         <div className="grid md:grid-cols-3 gap-6 mb-12">
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
                                 <div className="w-12 h-12 bg-[#1E0E4B] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="white"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
-                                        <path d="M9 18h6" />
-                                        <path d="M10 22h4" />
-                                    </svg>
+                                    <Image src="/fqlo.png" alt="Icon" height={64} width={64} />
                                 </div>
                                 <h2 className="text-lg font-semibold mb-2">Getting started</h2>
                                 <p className="text-gray-600 text-sm">Everything you need to start using Coinbank.</p>
@@ -51,7 +38,7 @@ const page = () => {
 
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
                                 <div className="w-12 h-12 bg-[#FF6B00] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <User className="text-white" size={24} />
+                                    <Image src="/su1.svg" alt="Icon" height={64} width={64} />
                                 </div>
                                 <h2 className="text-lg font-semibold mb-2">Managing my account</h2>
                                 <p className="text-gray-600 text-sm">Manage your account, settings, and more.</p>
@@ -59,7 +46,8 @@ const page = () => {
 
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
                                 <div className="w-12 h-12 bg-[#CCFF00] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <BarChart2 className="text-black" size={24} />
+                                    <Image src="/su2.svg" alt="Icon" height={64} width={64} />
+
                                 </div>
                                 <h2 className="text-lg font-semibold mb-2">Trading</h2>
                                 <p className="text-gray-600 text-sm">Learn Buy, sell, send, or receive cryptocurrencies.</p>
@@ -67,7 +55,7 @@ const page = () => {
 
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
                                 <div className="w-12 h-12 bg-[#FF6B00] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Wallet className="text-white" size={24} />
+                                    <Image src="/su3.svg" alt="Icon" height={64} width={64} />
                                 </div>
                                 <h2 className="text-lg font-semibold mb-2">Funding</h2>
                                 <p className="text-gray-600 text-sm">Learn how to transfer funds to and from your account.</p>
@@ -75,7 +63,7 @@ const page = () => {
 
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
                                 <div className="w-12 h-12 bg-[#CCFF00] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Shield className="text-black" size={24} />
+                                    <Image src="/su4.svg" alt="Icon" height={64} width={64} />
                                 </div>
                                 <h2 className="text-lg font-semibold mb-2">Privacy and security</h2>
                                 <p className="text-gray-600 text-sm">Help secure and protect your account.</p>
@@ -83,7 +71,7 @@ const page = () => {
 
                             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
                                 <div className="w-12 h-12 bg-[#1E0E4B] rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <BookOpen className="text-white" size={24} />
+                                    <Image src="/su5.svg" alt="Icon" height={64} width={64} />
                                 </div>
                                 <h2 className="text-lg font-semibold mb-2">Other topics</h2>
                                 <p className="text-gray-600 text-sm">Learn about API, common scams, referral programs, and more.</p>
