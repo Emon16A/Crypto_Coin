@@ -129,10 +129,12 @@ const Page = () => {
 
                                 {icons.map((icon, index) => (
                                     <React.Fragment key={index}>
-                                        <img
+                                        <Image
                                             src={icon}
                                             alt="Crypto Icon"
-                                            className="w-[10%] sm:w-[5%] md:w-[8%] lg:w-[80%] max-w-[64px]"
+                                            width={64}
+                                            height={64}
+                                            className="w-[10%] sm:w-[8%] md:w-[6%] lg:w-[5%] max-w-[64px]"
                                         />
                                         {index !== icons.length - 1 && (
                                             <div className="border-t border-[#E7E3FC] w-[5%] sm:w-[8%] md:w-[6%] lg:w-[5%] flex-shrink-0"></div>

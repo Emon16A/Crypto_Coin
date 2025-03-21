@@ -156,7 +156,7 @@ export default function FAQPage() {
                       How to verify your identity?
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600">
-                      To verify your identity, go to Account Settings and select the Verification tab. You'll need to
+                      To verify your identity, go to Account Settings and select the Verification tab. You will need to
                       provide a government-issued ID and follow the instructions provided.
                     </AccordionContent>
                   </AccordionItem>
@@ -165,7 +165,7 @@ export default function FAQPage() {
                       How can I reset my password?
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600">
-                      You can reset your password by clicking "Forgot password" on the login page. We'll send you an
+                      You can reset your password by clicking "Forgot password" on the login page. We will send you an
                       email with instructions to create a new password.
                     </AccordionContent>
                   </AccordionItem>
@@ -174,8 +174,8 @@ export default function FAQPage() {
                       I&apos;ve lost access to my two-factor device. How can I get into my account?
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600">
-                      If you've lost access to your two-factor authentication device, you can use your backup codes to
-                      log in. If you don't have backup codes, please contact our support team for assistance.
+                      If you have lost access to your two-factor authentication device, you can use your backup codes to
+                      log in. If you do not have backup codes, please contact our support team for assistance.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -199,7 +199,7 @@ export default function FAQPage() {
                       How do I verify my bank info?
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600">
-                      To verify your bank information, we'll make two small deposits to your account. You'll need to
+                      To verify your bank information, we will make two small deposits to your account. You will need to
                       confirm the exact amounts to complete verification.
                     </AccordionContent>
                   </AccordionItem>
@@ -225,7 +225,7 @@ export default function FAQPage() {
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600">
                       SSL certificates are automatically provisioned for all domains connected to our platform. You
-                      don't need to take any additional steps to secure your site.
+                      do not need to take any additional steps to secure your site.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
