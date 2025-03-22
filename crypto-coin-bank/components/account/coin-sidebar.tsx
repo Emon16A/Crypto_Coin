@@ -1,6 +1,6 @@
 "use client"
+import type { Coin } from "@/components/data/coins"
 import { Plus } from "lucide-react"
-import type { Coin } from "@/data/coins"
 import CoinIcon from "./coin-icon"
 
 interface CoinSidebarProps {

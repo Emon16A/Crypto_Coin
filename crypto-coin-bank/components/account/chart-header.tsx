@@ -1,6 +1,6 @@
+import type { Coin } from "@/components/data/coins"
 import { Button } from "@/components/ui/button"
 import { ChevronDown } from "lucide-react"
-import type { Coin } from "@/data/coins"
 
 interface ChartHeaderProps {
   coin: Coin

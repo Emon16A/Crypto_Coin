@@ -1,6 +1,6 @@
+import type { Coin } from "@/components/data/coins"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowUpRight, ArrowDownRight } from "lucide-react"
-import type { Coin } from "@/data/coins"
+import { ArrowDownRight, ArrowUpRight } from "lucide-react"
 
 interface CoinOverviewProps {
   coin: Coin

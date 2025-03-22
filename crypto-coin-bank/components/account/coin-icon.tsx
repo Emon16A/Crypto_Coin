@@ -1,4 +1,4 @@
-import type { Coin } from "@/data/coins"
+import type { Coin } from "@/components/data/coins"
 
 interface CoinIconProps {
   coin: Coin
