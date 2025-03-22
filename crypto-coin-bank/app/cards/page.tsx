@@ -10,6 +10,10 @@ import { useState } from "react"
 export default function CardsPage() {
     const [timeframe, setTimeframe] = useState("weekly")
 
+    const toggleTimeframe = () => {
+        setTimeframe((prev) => (prev === "weekly" ? "monthly" : "weekly"))
+    }
+
     return (
         <div className="flex flex-col min-h-screen">
             <div className="flex flex-1">
@@ -130,8 +134,8 @@ export default function CardsPage() {
                                         <CardContent className="p-6">
                                             <div className="flex items-center justify-between mb-6">
                                                 <h2 className="text-xl font-bold">Overview Balance</h2>
-                                                <Button variant="outline" className="gap-2">
-                                                    Weekly
+                                                <Button variant="outline" className="gap-2" onClick={toggleTimeframe}>
+                                                    {timeframe}
                                                     <ChevronDown className="h-4 w-4" />
                                                 </Button>
                                             </div>

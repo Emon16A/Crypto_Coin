@@ -15,16 +15,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Plus, Star } from "lucide-react"
 import { useEffect, useState } from "react"
 
-// Define the type for Transaction
 type Transaction = {
     id: number;
-    type: "deposit" | "withdraw";  // restrict type to "deposit" or "withdraw"
+    type: "deposit" | "withdraw";
     date: string;
     amount: string;
     crypto: string;
 };
 
-// Define the type for ChartData
 type ChartData = {
     month: string;
     open: number;
@@ -34,32 +32,43 @@ type ChartData = {
     isUp: boolean;
 };
 
-export default function AccountsPage() {
-    // State for selected coin
-    const [selectedCoin, setSelectedCoin] = useState(allCoins[0])
+type Coin = {
+    id: number;
+    name: string;
+    symbol: string;
+    logo: string;
+    color: string;
+    price: number;
+    marketCap: string;
+    netCost: number;
+    netCostPercentage: string;
+    holdings: number;
+    holdingsAllocation: string;
+    profitLoss: number;
+    profitPercentage: string;
+    change24h: number;
+    volume24h: number;
+};
 
-    // State for real-time data
-    const [chartData, setChartData] = useState<ChartData[]>([]) // Type for chartData
+export default function AccountsPage() {
+    const [selectedCoin, setSelectedCoin] = useState<Coin>(allCoins[0])
+
+    const [chartData, setChartData] = useState<ChartData[]>([])
     const [currentPrice, setCurrentPrice] = useState(selectedCoin.price)
     const [priceChange, setPriceChange] = useState(selectedCoin.change24h)
-    const [transactions, setTransactions] = useState<Transaction[]>([])  // Set state type as Transaction[]
-    const [alerts, setAlerts] = useState([])
+    const [transactions, setTransactions] = useState<Transaction[]>([])
 
-    // State for add assets modal
     const [showAddAssetsModal, setShowAddAssetsModal] = useState(false)
     const [searchTerm, setSearchTerm] = useState("")
 
-    // State for favorites
-    const [favorites, setFavorites] = useState([1]) // Bitcoin is favorited by default
+    const [favorites, setFavorites] = useState([1])
 
-    // Update data when selected coin changes
     useEffect(() => {
-        setChartData(generateChartData(selectedCoin)) // use the renamed function for chart data
+        setChartData(generateChartData(selectedCoin))
         setCurrentPrice(selectedCoin.price)
         setPriceChange(selectedCoin.change24h)
-        setTransactions(generateTransactions(selectedCoin))  // Make sure this function returns valid transactions
+        setTransactions(generateTransactions(selectedCoin))
 
-        // Simulate real-time price updates
         const interval = setInterval(() => {
             setCurrentPrice((prev) => {
                 const change = prev * (1 + (Math.random() - 0.5) * 0.002)
@@ -75,14 +84,12 @@ export default function AccountsPage() {
         return () => clearInterval(interval)
     }, [selectedCoin])
 
-    // Filter coins for search
     const filteredCoins = allCoins.filter(
         (coin) =>
             coin.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             coin.symbol.toLowerCase().includes(searchTerm.toLowerCase()),
     )
 
-    // Toggle favorite
     const toggleFavorite = () => {
         if (favorites.includes(selectedCoin.id)) {
             setFavorites(favorites.filter((id) => id !== selectedCoin.id))
@@ -140,7 +147,7 @@ export default function AccountsPage() {
                             <TransactionList transactions={transactions} coinName={selectedCoin.name} />
 
                             {/* Alerts */}
-                            <AlertList alerts={alerts} />
+                            <AlertList alerts={[]} /> {/* If you need alerts, pass them properly */}
                         </div>
                     </div>
                 </div>
@@ -159,23 +166,21 @@ export default function AccountsPage() {
     )
 }
 
-// Function to generate transactions with correct types
-function generateTransactions(selectedCoin: any): Transaction[] {
+function generateTransactions(selectedCoin: Coin): Transaction[] {
     return [
         {
             id: 1,
-            type: "deposit",  // Ensure type is 'deposit' or 'withdraw'
+            type: "deposit",
             date: "2025-03-22",
             amount: "0.5",
             crypto: selectedCoin.name,
         },
         {
             id: 2,
-            type: "withdraw",  // Ensure type is 'deposit' or 'withdraw'
+            type: "withdraw",
             date: "2025-03-21",
             amount: "0.2",
             crypto: selectedCoin.name,
         },
-        // More transactions here as needed
     ]
 }

@@ -27,7 +27,7 @@ export default function PricesPage() {
                             <div>
                                 <h3 className="text-lg font-semibold mb-1">Follow your favorite cryptos with Watchlist</h3>
                                 <p className="text-gray-500 text-sm">
-                                    Tap the <Star className="w-4 h-4 inline text-gray-400" /> at the right of an asset's list to add to your Watchlist.
+                                    Tap the <Star className="w-4 h-4 inline text-gray-400" /> at the right of an assets list to add to your Watchlist.
                                 </p>
                             </div>
                         </div>
