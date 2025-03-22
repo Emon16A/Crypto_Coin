@@ -1,8 +1,8 @@
 "use client"
-import { Search } from "lucide-react"
+import type { Coin } from "@/components/data/coins"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
-import type { Coin } from "@/data/coins"
+import { Search } from "lucide-react"
 import CoinIcon from "./coin-icon"
 
 interface AddAssetsModalProps {
