@@ -30,7 +30,7 @@ export default function SignupPage() {
                         </div>
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-[#131316]">Email</label>
-                            <Input type="email" className="h-12 border-[#C8C8D0] px-6 focus:border-[#FF6E00] focus:ring-[#FF6E00]" placeholder="Andre Santos" />
+                            <Input type="email" className="h-12 border-[#C8C8D0] px-6 focus:border-[#FF6E00] focus:ring-[#FF6E00]" placeholder="yourmail@gmail.com" />
                         </div>
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-[#131316]">Password</label>
