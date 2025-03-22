@@ -23,16 +23,18 @@ interface ChartTooltipProps {
   children?: React.ReactNode
 }
 
+interface PayloadItem {
+  value: number
+  name: string
+  dataKey: string
+  payload: Record<string, unknown> // 🔹 Replaced `any` with `unknown`
+}
+
 interface ChartTooltipContentProps {
   active?: boolean
-  payload?: Array<{
-    value: number
-    name: string
-    dataKey: string
-    payload: Record<string, any>
-  }>
+  payload?: PayloadItem[]
   label?: string
-  formatter?: (value: number, name: string, props: any) => React.ReactNode
+  formatter?: (value: number, name: string, props: PayloadItem) => React.ReactNode // 🔹 Typed `props`
   labelFormatter?: (label: string) => React.ReactNode
   hideLabel?: boolean
   indicator?: "dot" | "line"
@@ -115,7 +117,7 @@ export function ChartTooltipContent({
               {indicator === "line" && <div className="mr-2 h-2 w-3 rounded-sm" style={{ backgroundColor: color }} />}
               <div className="flex w-full items-center justify-between gap-2">
                 {formatter ? (
-                  formatter(item.value, name, item)
+                  formatter(item.value, name, item) // 🔹 Typed `item` properly
                 ) : (
                   <>
                     <span className="text-xs font-medium text-muted-foreground">{name}</span>
