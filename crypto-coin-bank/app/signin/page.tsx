@@ -70,12 +70,14 @@ export default function Page() {
                             Forgot password?
                         </Link>
 
-                        <Button className="w-full bg-orange-500 hover:bg-orange-600">
-                            <Link href="/Dashbord">
-                                Sign in
-                            </Link>
+                        <Link href="/Dashbord">
+                            <Button className="w-full bg-orange-500 hover:bg-orange-600">
 
-                        </Button>
+                                Sign in
+
+
+                            </Button>
+                        </Link>
                     </form>
 
                     <div className="mt-6 space-y-4">
