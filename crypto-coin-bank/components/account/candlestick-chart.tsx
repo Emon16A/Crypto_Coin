@@ -39,7 +39,7 @@ export default function CandlestickChart({ data, currentPrice }: CandlestickChar
                   left: "50%",
                   transform: "translateX(-50%)",
                   bottom: candle.isUp ? "100%" : "auto",
-                  top: candle.isUp ? "auto" : "100%",
+                  top: candle.isUp ? "auto" : "calc(100% - 60px)",
                 }}
               ></div>
 
@@ -59,4 +59,5 @@ export default function CandlestickChart({ data, currentPrice }: CandlestickChar
     </div>
   )
 }
+
 
